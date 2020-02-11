@@ -1,10 +1,12 @@
 import config from '../config.json';
 import utils from 'url';
-const lodash = {
-  pick: require('lodash.pick'),
-  identity: require('lodash.identity')
-};
 import request from 'superagent';
+import lodash from 'lodash';
+// const lodash = {
+//   pick: require('lodash.pick'),
+//   identity: require('lodash.identity')
+// };
+
 class Geo {
   reverseGeo(coords) {
     const url = utils.format({

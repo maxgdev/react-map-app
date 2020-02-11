@@ -1,5 +1,5 @@
-{
-    "openstreetmap": {
+{ 
+  "openstreetmap": {
       "name": "OpenStreetMap",
       "protocol": "https",
       "host": "nominatim.openstreetmap.org",
