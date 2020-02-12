@@ -11,7 +11,27 @@ function App() {
       longitude: -0.12750
     }
 
- 
+  var options = {
+    enableHighAccuracy: true,
+    timeout: 1000,
+    maximumAge: 0
+  };
+
+  var success = (pos) => {
+    var coords = pos.coords;
+    console.log('Your curent position is: ' +
+      '\nLatitude : ' + coords.latitude +
+      '\nLongitude : ' + coords.longitude +
+      '\nAccuracy is more or less : ' + coords.accuracy + ' meters.' +
+      '\nLocation detected : ' + new Date(pos.timestamp)
+      );
+  };
+
+  var error = (err) => {
+    console.warn('ERROR(' + err.code + '): ' + err.mesage);
+  };
+
+  navigator.geolocation.getCurrentPosition(success, error, options);
 
   return (
     <div className="App">
