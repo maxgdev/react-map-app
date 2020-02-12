@@ -6,13 +6,8 @@ import config from './config.json';
 const Geo = new GeoService();
 
 function App() {
-  const londonGeoInfo = {
-      latitude: 51.50722,
-      longitude: -0.12750
-    }
   const [appLong, setAppLong] = useState(0);
   const [appLat, setAppLat] = useState(0);
-  const [appDate, setAppDate] = useState(0);
 
   var options = {
     enableHighAccuracy: true,
